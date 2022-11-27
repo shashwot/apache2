@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World - App X <!-- Replace 'X' with '1' or '2' as appropriate --></title>
+        <link href="https://banner2.cleanpng.com/20180519/vxe/kisspng-apache-tomcat-apache-http-server-web-server-java-s-5b0036cb6ea219.5097810415267406834532.jpg" rel="icon" type="image/jpg" />
+        <style>
+            body {
+                margin: 0px;
+                font: 20px 'RobotoRegular', Arial, sans-serif;
+                font-weight: 100;
+                height: 100%;
+                color: #0f1419;
+            }
+            div.info {
+                display: table;
+                background: #e8eaec;
+                padding: 20px 20px 20px 20px;
+                border: 1px dashed black;
+                border-radius: 10px;
+                margin: 0px auto auto auto;
+            }
+            div.info p {
+                display: table-row;
+                margin: 5px auto auto auto;
+            }
+            div.info p span {
+                display: table-cell;
+                padding: 10px;
+            }
+            img {
+                width: 176px;
+                margin: 36px auto 36px auto;
+                display:block;
+            }
+            div.smaller p span {
+                color: #3D5266;
+            }
+            h1, h2 {
+                font-weight: 100;
+            }
+            div.check {
+                padding: 0px 0px 0px 0px;
+                display: table;
+                margin: 36px auto auto auto;
+                font: 12px 'RobotoRegular', Arial, sans-serif;
+            }
+            #footer {
+                position: fixed;
+                bottom: 36px;
+                width: 100%;
+            }
+            #center {
+                width: 400px;
+                margin: 0 auto;
+                font: 12px Courier;
+            }
+        </style>
+
+        <script>
+            var ref;
+            function checkRefresh() {
+                if (document.cookie == "refresh=1") {
+                    document.getElementById("check").checked = true;
+                    ref = setTimeout(function(){location.reload();}, 1000);
+                } else {
+                }
+            }
+            function changeCookie() {
+                if (document.getElementById("check").checked) {
+                    document.cookie = "refresh=1";
+                    ref = setTimeout(function(){location.reload();}, 1000);
+                } else {
+                    document.cookie = "refresh=0";
+                    clearTimeout(ref);
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="checkRefresh();">
+        <img alt="APACHE2 Logo" src="https://cdn-bifje.nitrocdn.com/pvxhbnifiKkfbYrMyDTPyQBmNZnuCCAb/assets/static/optimized/rev-2a2c6a4/wp-content/uploads/2021/02/Que-es-apache-web-server-1200x495.png"/>
+        <div class="info">
+            <p><span>Server name:</span> <span>example.com</span></p>
+            <p><span>Server address:</span> <span>example.com</span></p>
+            <p class="smaller"><span>User Agent:</span> <span>client_browser</span></p>
+            <p class="smaller"><span>URI:</span> <span>https://example.com</span></p>
+            <p class="smaller"><span>Doc Root:</span> <span>/var/www/html</span></p>
+            <p class="smaller"><span>Date:</span> <span>2022</span></p>
+            <p class="smaller"><span>Client IP:</span> <span>192.168.X.X</span></p>
+            <p class="smaller"><span>Apache Version:</span> <span>2.4.52</span></p>
+        </div>
+        <div class="check">
+            <input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh</input>
+        </div>
+        <div id="footer">
+            <div id="center" align="center">
+                Request ID: request_id<br/>
+                Apache
+            </div>
+        </div>
+    </body>
+</html>

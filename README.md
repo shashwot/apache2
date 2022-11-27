@@ -1,2 +1,1 @@
-# apache2
-apache2 sample configs with docker
+# Apache 2

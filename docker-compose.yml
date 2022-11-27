@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  apache:
+    build: .
+    container_name: apache
+    ports:
+    - '80:80'
+    - '443:443'
+    volumes:
+    - ./conf:/etc/apache2/sites-enabled:ro
+    - ./public_html:/var/www/example.com/public_html:ro
+    - ./certs:/etc/apache2/certs:ro
